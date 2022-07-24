@@ -32,7 +32,7 @@ const LayoutComp = () => (
         textAlign: 'center',
       }}
     >
-      Tanyarat Nattip ©2022 Created by Ant design
+      Tanyarat Nattip ©2022 Visitor App.
     </Footer>
   </Layout>
 );
