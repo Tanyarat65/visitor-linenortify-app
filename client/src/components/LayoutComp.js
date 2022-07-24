@@ -32,7 +32,7 @@ const LayoutComp = () => (
         textAlign: 'center',
       }}
     >
-      Ant Design ©2018 Created by Ant UED
+      Tanyarat Nattip ©2022 Created by Ant design
     </Footer>
   </Layout>
 );

@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import 'antd/dist/antd.css';
 import '../index.css';
 import { Button, Form, Input, Select } from 'antd';
@@ -42,16 +43,21 @@ class Content extends React.Component {
         });
     }
   };
-  onFinish = (values) => {
+  onFinish = async (values) => {
     console.log(values);
+    const valueData =await axios.post('/lineNotify',{values});
+    try{
+      console.log(valueData);
+    }
+    catch(err){
+      console.log(err);
+    }
   };
   onReset = () => {
     this.formRef.current.resetFields();
   };
-  
-  handleSubmit = ()=>{
-    
-  }
+
+ 
 
   render() {
     return (
@@ -125,7 +131,7 @@ class Content extends React.Component {
           <Button htmlType="button" onClick={this.onReset}>
             Reset
           </Button>
-          
+
         </Form.Item>
       </Form>
     );

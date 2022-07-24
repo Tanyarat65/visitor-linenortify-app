@@ -1,9 +1,10 @@
 import React from 'react';
-import { Router,Route } from 'react-router-dom';
+import axios from 'axios';
 import LayoutComp from './components/LayoutComp';
 
 
 function App() {
+  axios.defaults.baseURL = "http://localhost:3000";
   return (
     <>
       <LayoutComp/>
